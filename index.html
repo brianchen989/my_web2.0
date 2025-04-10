@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-TW"> <!-- 網頁語言-->
+<head>
+    <meta charset="UTF-8"> <!--編碼方式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 網頁顯示設定-->
+    <title>陳辰的網頁</title><!-- 標籤-->
+    <link rel="stylesheet" href="網2.0.css"><!-- 引入css-->
+</head>
+<body>
+    <header><!-- logo-->
+      <button class = "menu">&#9776;</button>
+      <h1>這裡是logo</h1>
+      <nav><!-- 導覽列-->
+        <ul><!--無數字列表 -->
+          <li><a class="nav-link" href="#past">過去</a></li><!--跳至第三區 -->
+          <li><a class="nav-link" href="#now">現在</a></li>
+          <li><a class="nav-link" href="未來/future.html">未來</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+      
+    
+    <main><!-- 主要內容-->
+    <section class ="news"><!-- 第一區-->
+      <h1>你好!</h1>
+      <h1>這裡是陳辰的網頁</h1>
+      <h2>這裡可以了解我的事情</h2>
+      <p><a style="color: antiquewhite;" href="https://www.youtube.com/watch?v=FxfEzHiIgQU" >點我</a></p><!-- 連結--><!-- 需要動畫效果的文字 -->
+    </section>
+    <section class ="quo" id="now"><!-- 第二區-->
+      <img src = "image/個人照.jpg" alt="圖片" ><!-- 圖片-->
+
+      <div class = "info"><!--將第二區分割-->
+        <h2>
+          個人簡歷
+        </h2>
+        <p>
+          我是陳辰<br>
+          對資訊方面充滿熱情，特別喜愛遊戲設計與人工智慧應用。<br>
+         曾使用 C++、Unity、Python 進行專案開發，目前主要以 Python 為主。透過自主學習與實作，我累積了豐富的程式設計經驗，也不斷挑戰各種技術應用，期許自己未來能深入人工智慧領域，並將所學貢獻於實務應用。
+        </p>
+      </div>
+      
+    </section> 
+    <section class ="portf" id="past"> <!-- 第三區-->
+      <ol><!-- 有數字列表-->
+        <li><a href="#"></a>國中：</a></li>
+          <ul><!--無數字列表 -->
+            <li><a href="#"></a>	學習 Scratch 與 App Inventor，並參加 Scratch 比賽，啟發對程式設計的興趣。</a></li>
+          </ul>
+        <li><a href="#"></a>高中：</a></li>
+          <ul><!--無數字列表 -->
+            <li><a href="#"></a>就讀成功高中，自學 Python，並以此製作直向射擊遊戲。</a></li>
+            <li><a href="#"></a>透過研究電子遊戲產業與元宇宙概念，深入理解資訊科技與商業的連結。</a></li>
+            <li><a href="#"></a>自學 Unity，製作遊戲「小朋友下樓梯」。</a></li>
+          </ul>
+        <li><a href="#"></a>大學：</a></li>
+          <ul><!--無數字列表 -->
+            <li><a href="#"></a>雖進入土木系，但仍持續精進資訊能力。曾於土木系程式設計比賽中獲得第一名。</a></li>
+            <li><a href="#"></a>自學機器學習與 AI，修習相關課程</a></li>
+            <li><a href="#"></a>正在準備 AWS Cloud Practitioner 證照與參加崇越競賽大賞</a></li>
+          </ul>
+      </ol>
+      
+    </section>
+    
+    <blockquote><!-- 引用-->
+      <p>在這個世界上，有兩種力量，一是劍，二是筆。<br>最後，劍會被筆所征服。</p>
+      <p>— 佐藤長治</p>
+    </blockquote>
+
+    <section class ="product"><!-- 第四區-->
+      
+    <div>
+      <img id="productImage" src="image/下樓梯.png" alt="圖片1">
+      <br>
+      <p id="productName">下樓梯</p>
+    </div>
+    <button id = right_button onclick="right_btn_click(this)">></button>
+    <button id="detail_button" onclick="window.location.href='https://www.youtube.com/watch?v=FxfEzHiIgQU';">...</button><!-- 額外按鍵(功能待補)-->
+    <script src = "網2.0.js"></script>
+    </section>
+    <section class ="newsletter">
+    <p>請輸入意見</p>
+    <form id="contactForm" action="https://formsubmit.co/brianchen989@gmail.com" method="POST">
+      <!-- 自訂郵件主旨 -->
+      <input type="hidden" name="_subject" value="網站表單通知">
+      <!-- 自訂提交後的重定向頁面 -->
+      <input type="hidden" name="_next" value="https://brianchen989.github.io/my-website">
+      
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" placeholder="輸入您的姓名" required pattern="[a-zA-Z\u4e00-\u9fa5 ]+">
+      
+      <label for="email">電子郵件：</label>
+      <input type="email" id="email" name="email" placeholder="輸入您的電子郵件" required>
+      
+      <label for="phone">電話號碼：</label>
+      <input type="tel" id="phone" name="phone" placeholder="輸入您的電話號碼" pattern="[0-9]{10}">
+      
+      <label for="message">留言：</label>
+      <textarea id="message" name="message" placeholder="輸入您的留言" rows="4" required></textarea>
+      
+      <button type="submit">送出</button>
+  </form>
+    <script>
+     /* 檢查表單是否已提交 */
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+       
+        localStorage.setItem('formSubmitted', 'true');
+        
+    });
+</script>
+    </section>
+    
+
+    </main>
+
+    <footer>
+      <p>0908107363</p>
+      <p>brianchen989@gmail.com </p>
+      <p>https://github.com/brianchen989</p>
+      <p>新北市土城區福安街98-9號</p>
+    </footer><!-- 頁尾-->
+</body>
+</html>

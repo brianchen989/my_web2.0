@@ -1,0 +1,327 @@
+/*平滑滾動*/
+html {
+    scroll-behavior: smooth;
+  }
+header{
+    background-color: rgb(49, 163, 192);
+    border: 5px rgb(0, 4, 127) dashed;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+}/*設定標題*/
+header h1{
+    color :rgb(254, 254, 254);
+    position: absolute;
+    left: 120px;
+    top :0px;
+    line-height: 80px;
+    background-image: url(image/浣熊3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    text-indent: -999999px;
+}/*設定logo*/
+.nav-link {
+    display: inline;
+    margin-right: 4vw;
+    color :rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+}/*互動前導覽*/
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 10px;  
+    line-height: 80px; 
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}/*導覽定位*/
+header ul li {
+    display: inline-block; /* 確保每個列表項目是行內塊元素 */
+}
+
+.nav-link:hover {
+    color :rgb(111, 111, 111);
+    text-decoration: underline;
+}/*互動後導覽*/
+
+
+main h1{
+    color :rgb(255, 255, 255);
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}/*第一區大文字*/
+main h2{
+    color :rgb(138, 188, 235);
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}/*第一區小文字*/
+
+.news{
+    background-color: rgb(215, 245, 235);
+    color:aliceblue;
+    height:95vh;
+    background-image: url(image/酷比.jpg);/*第一區背景*/
+    background-repeat: no-repeat;/*第一區背景不重複*/
+    background-size: cover;/*填滿*/
+    background-position: center ;/*第一區背景定位*/
+    display: flex;/*物件放置方式*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}/*第一區大架構*/
+
+@keyframes scaleText {
+    0% {
+        transform: scale(1); /* 初始大小 */
+    }
+    50% {
+        transform: scale(1.2); /* 放大到 1.2 倍 */
+    }
+    100% {
+        transform: scale(1); /* 回到初始大小 */
+    }
+}
+
+/* 應用動畫到第一區的 <p> */
+.news p {
+    animation: scaleText 2s infinite; /* 2 秒完成一次動畫，無限循環 */
+    transition: transform 0.3s ease; /* 平滑過渡效果 */
+    display: inline-block; /* 確保動畫效果正常 */
+}
+.news a{
+    text-decoration: none;
+    border: 5px solid #ff1b1b;
+    padding: 10px 20px;
+    border-radius: 15px;
+}/*連結外觀*/
+.portf{
+    background-color: rgb(215, 245, 235);
+    color:aliceblue;
+    height:95vh;
+    background-image: url(image/螢幕擷取畫面04-09.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content: center;
+    
+}/*第三區大架構*/
+main li{
+    color: rgb(55, 177, 152);
+    font-size: 30px;
+}/*列表顏色*/
+.quo{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.quo img{
+    width: 50%;
+}/*第二-1區大架構*/
+.info{
+    width: 50%;
+    color :rgb(138, 188, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}/*第二-2區大架構*/
+.info h2{
+    font-size: 50px;
+}
+.info p{
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.product{
+    background-color: rgb(199, 205, 226);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px,180ox,80px;
+}/*第四區大架構*/
+.product div{
+    width: 400px;
+    text-align: center;
+}
+.product img{   
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 25px; /* Move images down a bit */
+    margin-left: 400px; /* Move images right a bit */
+}   
+.product p{
+    color: #000;
+    width: 300px;
+    height: 50px;
+    font-size: 50px;
+    line-height: 1.6em;
+    margin-left: 600px;
+    writing-mode: horizontal-tb;
+}
+#right_button{
+    color:rgb(0, 0, 0);
+    font-size: 100px;
+    background-color:rgb(255, 255, 255);
+    border: 1px solid rgb(91, 103, 112);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 750px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#detail_button{
+    color:rgb(0, 0, 0);
+    font-size: 50px;
+    background-color:rgb(189, 177, 177);
+    border: 1px solid rgb(91, 103, 112);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px; /* 修正單位 */
+    margin-top: 405px;
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.newsletter{
+    background-color:rgb(50, 48, 48);
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    padding: 60px;
+}/*表單*/
+.newsletter p{
+    color:aliceblue;
+    font-size: 20px;
+}
+/* 讓所有表單的標籤顯示在輸入框上方 */
+form label {
+    display: block; /* 每個標籤佔一行 */
+    color: white; /* 設置文字顏色為白色 */
+    font-weight: bold; /* 可選：讓文字加粗 */
+    margin-bottom: 5px; /* 增加標籤與輸入框之間的間距 */
+}
+/* 縮小前三個輸入框的大小 */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] ,
+form input[type="message"] {
+    width: 50%; /* 將寬度縮小到 50% */
+    padding: 5px; /* 調整內邊距 */
+    font-size: 14px; /* 調整字體大小 */
+    display: block; /* 每個元素佔一行 */
+    margin-bottom: 10px; /* 增加下方間距 */
+}
+
+
+/* 更改 label 的文字顏色為白色 */
+form label {
+    color: white; /* 設置文字顏色為白色 */
+    font-weight: bold; /* 可選：讓文字加粗 */
+}
+.newsletter input{
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+}/*輸入設定*/
+input ::placeholder{
+    color: #6b6a6a;
+}
+.newsletter button{
+    color:aliceblue;
+    font-size: 20px;
+    background-color:rgb(45, 37, 46);
+    border: 1px solid rgb(99, 130, 154);
+    border-radius: 5px;
+    cursor: pointer;
+}/*表單案件*/
+
+
+footer{
+    background-color:black;
+    color:aliceblue;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    font-size: 20px;
+    
+}/*頁尾*/
+.menu{
+    display:none;
+}/*展開頁面平時不出現*/
+
+
+/*響應式語法*/
+@media screen and  ( max-width:768px)/*畫面縮小時*/{
+    header ul{
+        display: none;
+    }/*隱藏標題*/
+    header h1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }/*移動logo*/
+    .menu{
+        display: block;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        cursor: pointer;
+    }/*展開頁面出現設定*/
+    #detail_button{
+           display: center;  
+    }
+    .portf li{
+        font-size: 10px;
+    }/*改變大小*/
+    main h1{
+        color :rgb(255, 255, 255);
+        font-size: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }/*改變頁面表示方式*/
+    main h1{
+        font-size: 20px;
+    }/*改變大小*/
+    main h2{
+        display: none;
+    }/*改變大小*/
+    .quo{
+        flex-direction: column;
+    }
+    .quo img{
+        width: 100%;
+    }
+    .info{
+        width: 100%;  
+    }/*改變頁面表示方式*/
+    .product{
+        flex-direction: column;
+        padding: 60px 0;
+    }
+    .product div{
+        margin-bottom: 30px;
+    }/*改變頁面表示方式*/
+    
+}
