@@ -17,17 +17,33 @@
     #counter {
       font-size: 20px;
       font-weight: 600;
+      background: #7fdec4;
+      padding: 8px 12px;
+      border-radius: 6px;
       margin: 12px 8px;
       display: none; /* 預設不顯示，點擊後才顯示 5 秒 */
     }
 
-    /* 恭喜文字特別樣式（可選） */
+    /* 恭喜文字特別樣式（放大且置中） */
     #counter.congrats {
       color: #fff;
-      background: #28a745;
-      padding: 8px 12px;
-      border-radius: 6px;
+      background: #9d8b13;
+      padding: 16px 24px;
+      border-radius: 8px;
+
+      /* 讓恭喜文字置中於整個視窗 */
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      /* 放大字型並確保置中與突出顯示 */
+      font-size: 36px;
+      font-weight: 700;
+      z-index: 1000;
       display: inline-block;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
     }
 
     /* 讓每個 section 水平排列且上緣對齊 */
