@@ -14,7 +14,7 @@ if (!click_imgs || click_imgs.length === 0) {
 // 計時器 id（用來在再次點擊時重設）
 let hideTimer = null;
 // 顯示延遲 (ms)：這裡設成 3 秒
-const HIDE_DELAY_MS = 5000;
+const HIDE_DELAY_MS = 3000;
 
 // 更新計數並顯示；全部點完時顯示恭喜並在指定時間後隱藏
 function updateCountAndShow() {
