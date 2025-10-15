@@ -2,13 +2,17 @@
 html {
     scroll-behavior: smooth;
   }
+
+/*設定標題*/
 header{
     background-color: rgb(49, 163, 192);
     border: 5px rgb(0, 4, 127) dashed;
     height: 100px;
     width: 100%;
     position: fixed;
-}/*設定標題*/
+}
+
+/*設定logo*/
 header h1{
     color :rgb(254, 254, 254);
     position: absolute;
@@ -20,14 +24,18 @@ header h1{
     background-position: center;
     width: 210px;
     text-indent: -999999px;
-}/*設定logo*/
+}
+
+/*互動前導覽*/
 .nav-link {
     display: inline;
     margin-right: 4vw;
     color :rgb(255, 255, 255);
     text-decoration: none;
     font-size: 18px;
-}/*互動前導覽*/
+}
+
+/*導覽定位*/
 header ul {
     position: absolute;
     right: 5vw;
@@ -38,17 +46,19 @@ header ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}/*導覽定位*/
+}
+
 header ul li {
     display: inline-block; /* 確保每個列表項目是行內塊元素 */
 }
 
+/*互動後導覽*/
 .nav-link:hover {
     color :rgb(111, 111, 111);
     text-decoration: underline;
-}/*互動後導覽*/
+}
 
-
+/*第一區大文字*/
 main h1{
     color :rgb(255, 255, 255);
     font-size: 60px;
@@ -56,7 +66,9 @@ main h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}/*第一區大文字*/
+}
+
+/*第一區小文字*/
 main h2{
     color :rgb(138, 188, 235);
     font-size: 20px;
@@ -64,8 +76,9 @@ main h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}/*第一區小文字*/
+}
 
+/*第一區大架構*/
 .news{
     background-color: rgb(215, 245, 235);
     color:aliceblue;
@@ -78,8 +91,9 @@ main h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}/*第一區大架構*/
+}
 
+/* 文字縮放動畫 */
 @keyframes scaleText {
     0% {
         transform: scale(1); /* 初始大小 */
@@ -104,6 +118,35 @@ main h2{
     padding: 10px 20px;
     border-radius: 15px;
 }/*連結外觀*/
+
+/*第二-1區大架構*/
+.quo{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+}
+.quo img{
+    width: 50%;
+}
+
+/*第二-2區大架構*/
+.info{
+    width: 50%;
+    color :rgb(138, 188, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info h2{
+    font-size: 50px;
+}
+.info p{
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*第三區大架構*/
 .portf{
     background-color: rgb(215, 245, 235);
     color:aliceblue;
@@ -117,44 +160,89 @@ main h2{
     align-items:flex-start;
     justify-content: center;
     
-}/*第三區大架構*/
+}
 main li{
     color: rgb(55, 177, 152);
     font-size: 30px;
 }/*列表顏色*/
-.quo{
-    background-color: rgb(255, 255, 255);
+
+
+/*第3.5區大架構*/
+.achievement{
+    background-color: rgb(44, 48, 61);
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px,180ox,80px;
 }
-.quo img{
-    width: 50%;
-}/*第二-1區大架構*/
-.info{
-    width: 50%;
-    color :rgb(138, 188, 235);
+.achievement div{
+    width: 400px;
+    text-align: center;
+}
+.achievement h2 {
+  font-size: 60px;
+  color: #d4af37;
+  
+}
+.achievement img{   
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 25px; /* Move images down a bit */
+    margin-left: 400px; /* Move images right a bit */
+}   
+.achievement p{
+    color: #e2dada;
+    width: 300px;
+    height: 50px;
+    font-size: 50px;
+    line-height: 1.6em;
+    margin-left: 600px;
+    writing-mode: horizontal-tb;
+}
+#right_button_0{
+    color:rgb(0, 0, 0);
+    font-size: 100px;
+    background-color:rgb(255, 255, 255);
+    border: 1px solid rgb(91, 103, 112);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: 750px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}/*第二-2區大架構*/
-.info h2{
+}
+#detail_button_0{
+    color:rgb(0, 0, 0);
     font-size: 50px;
+    background-color:rgb(189, 177, 177);
+    border: 1px solid rgb(91, 103, 112);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 50px; /* 修正單位 */
+    margin-top: 405px;
+    display: flex;
+    flex-direction: column;
+    
+   
 }
-.info p{
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
-}
+
+/*第四區大架構*/
 .product{
     background-color: rgb(199, 205, 226);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px,180ox,80px;
-}/*第四區大架構*/
+}
 .product div{
     width: 400px;
     text-align: center;
+}
+.product h2 {
+  font-size: 60px;
+  color: #00008B;
+  
 }
 .product img{   
     width: 700px;
@@ -198,6 +286,8 @@ main li{
     
    
 }
+
+/*表單*/
 .newsletter{
     background-color:rgb(50, 48, 48);
     display: flex;
@@ -205,7 +295,7 @@ main li{
     align-items:center;
     justify-content: center;
     padding: 60px;
-}/*表單*/
+}
 .newsletter p{
     color:aliceblue;
     font-size: 20px;
@@ -251,7 +341,7 @@ input ::placeholder{
     cursor: pointer;
 }/*表單案件*/
 
-
+/*頁尾*/
 footer{
     background-color:black;
     color:aliceblue;
@@ -262,7 +352,7 @@ footer{
     justify-content: center;
     font-size: 20px;
     
-}/*頁尾*/
+}
 .menu{
     display:none;
 }/*展開頁面平時不出現*/

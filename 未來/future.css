@@ -27,6 +27,12 @@ section {
     align-items: center;
     justify-content: center;
 }
+.want_2_do .done_list {
+    color: #d6a376;                  /* 文字顏色 */
+    
+    margin: 6px 0;                   /* 與上下項目留白 */
+    text-decoration: line-through;           /* 確保沒有刪除線 */
+}
 #return_button{
     color:rgb(0, 0, 0);
     font-size: 30px;
