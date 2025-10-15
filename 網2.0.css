@@ -19,7 +19,6 @@ header h1{
     left: 120px;
     top :0px;
     line-height: 80px;
-    background-image: url(image/浣熊3.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 210px;
@@ -356,7 +355,14 @@ footer{
 .menu{
     display:none;
 }/*展開頁面平時不出現*/
-
+#raccoon5 {
+  display: block;
+  width: 200px;       /* 基準寬度 */
+  height: auto;       /* 保持比例 */
+  transform: translateX(200px) scale(0.01); /* 視覺上上移並放大 */
+  transform-origin: center center;
+  transition: transform 0.15s ease;
+}
 
 /*響應式語法*/
 @media screen and  ( max-width:768px)/*畫面縮小時*/{
@@ -377,6 +383,18 @@ footer{
         left: 20px;
         cursor: pointer;
     }/*展開頁面出現設定*/
+    /* 點擊漢堡菜單後放大主要區域的圖片（只在小螢幕生效） */
+    body.enlarged-images  #raccoon5{
+    transform: scale(7); /* 放大倍數，改成你要的 */
+    transition: transform 300ms ease;
+    transform-origin: center center;
+    z-index: 10; /* 視需要調整，避免被遮蓋 */
+  }
+
+    /* 當放大時，允許圖片超出原容器顯示 */
+    body.enlarged-images #raccoon5 {
+    overflow: visible;
+  }
     #detail_button{
            display: center;  
     }

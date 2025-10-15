@@ -1,0 +1,85 @@
+/* 圖片樣式 */
+img.clickable {
+  cursor: pointer;
+  display: block;
+}
+
+/* 套用到有 id 的圖片 */
+@keyframes pulse {
+  0%   { transform: translateY(-16px) scale(2); }
+  50%  { transform: translateY(-4px) scale(2); }
+  100% { transform: translateY(-16px) scale(2); }
+}
+
+#raccoon1 {
+  width: 200px;
+  height: auto;
+  transform-origin: center center;
+  /* 動畫：持續 0.4s 完成一個來回，無限次重複，緩動為 ease-in-out */
+  animation: pulse 0.4s ease-in-out infinite;
+}
+#raccoon2 {
+  width: 200px;       /* 基準寬度 */
+  height: auto;       /* 保持比例 */
+  transform: translateX(580px) translateY(535px) scale(1.25); /* 視覺上上移並放大 */
+  transform-origin: center center;
+  transition: transform 0.15s ease;
+}
+#raccoon3 {
+  width: 200px;       /* 基準寬度 */
+  height: auto;       /* 保持比例 */
+  transform: translateX(-888px) translateY(43px) scale(1); /* 視覺上上移並放大 */
+  transform-origin: center center;
+  transition: transform 0.15s ease;
+}
+#raccoon4 {
+  width: 200px;       /* 基準寬度 */
+  height: auto;       /* 保持比例 */
+  transform: translateX(337px) translateY(765px) scale(0.25); /* 視覺上上移並放大 */
+  transform-origin: center center;
+  transition: transform 0.15s ease;
+}
+
+/* 計數顯示：預設隱藏 */
+#counter {
+  font-size: 59px;
+  font-weight: 600;
+  background: #7fdec4;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin: 12px 8px;
+  display: none; /* 預設不顯示，點擊後才顯示 */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+/* 恭喜文字特別樣式（放大且置中） */
+#counter.congrats {
+  color: #fff;
+  background: #c7b01a;
+  padding: 16px 24px;
+  border-radius: 8px;
+
+  /* 讓恭喜文字置中於整個視窗 */
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 放大字型並確保置中與突出顯示 */
+  font-size: 36px;
+  font-weight: 700;
+  z-index: 1000;
+  display: inline-block;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* 讓每個 section 水平排列且上緣對齊 */
+section {
+  display: inline-block;
+  vertical-align: top;
+}

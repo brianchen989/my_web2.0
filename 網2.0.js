@@ -103,3 +103,18 @@ document.addEventListener("DOMContentLoaded", function() {
 function detail_btn_click() {
     window.location.href = "https://www.youtube.com/watch?v=FxfEzHiIgQU";
 }
+document.addEventListener('DOMContentLoaded', function () {
+  // ...existing DOMContentLoaded code...
+
+  const menuBtn = document.querySelector('.menu');
+  if (menuBtn) {
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.addEventListener('click', function () {
+      document.body.classList.toggle('enlarged-images');
+      const expanded = document.body.classList.contains('enlarged-images');
+      this.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  }
+
+  // ...existing DOMContentLoaded code...
+});
