@@ -28,12 +28,13 @@ const quotes = [
 // 勳章牆切換功能
 let C_A_ImageIndex = 0;
 const A_images = [
-  { src: 'image/螢幕擷取畫面 2025-09-16 153607.png', name: 'pygame' ,alt:"pygame",url: 'https://github.com/brianchen989/pygame_relive'},
-  { src: 'image/太空旅行.png', name: '太空旅行' ,alt:"太空旅行",url: 'https://github.com/brianchen989/-'},
-  { src: 'image/PYTHON.png', name: '練PYTHON' ,alt:"練PYTHON",url: 'https://github.com/brianchen989/python_in_senior'}
+  { src: 'image/aws cloud practitioner.png', name: 'aws_practitioner' ,alt:"aws_practitioner"},
+  { src: 'image/崇岳獎狀.png', name: '崇越ai競賽' ,alt:"崇越ai人工競賽"},
+  { src: 'image/大一下書卷.png', name: '書卷獎' ,alt:"書卷獎"},
+  { src: 'image/多益成績.png', name: '多益分數' ,alt:"多益分數"}
 ];
  
-// 更新顯示並綁定點擊連結
+// 更新成就顯示並綁定點擊連結
 function updateAchievementDisplay() {
   const achievementImage = document.getElementById('achievementImage');
   const achievementName = document.getElementById('achievementName');

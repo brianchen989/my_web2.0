@@ -169,7 +169,7 @@ main li{
 
 /*第3.5區大架構*/
 .achievement{
-    background-color: rgb(44, 48, 61);
+    background-color: rgb(54, 60, 81);
     display: flex;
     justify-content: space-between;
     align-items: center;
