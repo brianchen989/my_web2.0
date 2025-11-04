@@ -51,6 +51,11 @@ function updateAchievementDisplay() {
     if (url) window.open(url, '_blank');
   };
 }
+// 切到上一張
+function left_btn_click_0() {
+   C_A_ImageIndex = ( C_A_ImageIndex - 1 + A_images.length) % A_images.length;//+ A_images.length避免負數
+  updateAchievementDisplay();
+}
   // 切到下一張
 function right_btn_click_0() {
    C_A_ImageIndex = ( C_A_ImageIndex + 1) % A_images.length;
@@ -87,6 +92,11 @@ function updateProductDisplay() {
     const url = images[currentImageIndex].url;
     if (url) window.open(url, '_blank');
   };
+}
+// 切到上一張
+function left_btn_click() {
+  currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+  updateProductDisplay();
 }
   // 切到下一張
 function right_btn_click() {

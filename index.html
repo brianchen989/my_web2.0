@@ -84,7 +84,7 @@
 
     <section class ="achievement"><!-- 第3.5區-->
     
-      
+    
     <div>
       <h2>
           成就
@@ -93,13 +93,14 @@
       <br>
       <p id="achievementName">下樓梯</p>
     </div>
+    <button id="left_button_0" onclick="left_btn_click_0(this)"><</button>  
     <button id = right_button_0 onclick="right_btn_click_0(this)">></button>
     <button id="detail_button_0" onclick="window.location.href='https://www.youtube.com/watch?v=FxfEzHiIgQU';">...</button><!-- 額外按鍵(功能待補)-->
-    <script src = "網2.0.js"></script>
+    
     </section>
 
     <section class ="product"><!-- 第四區-->
-      
+    
     <div>
       <h2>
           作品輯
@@ -110,9 +111,10 @@
       <p id="productName">下樓梯</p>
       <img id = "raccoon4" img class="clickable" src="image/浣熊3.png" alt="浣熊4" />
     </div>
+    <button id = left_button onclick="left_btn_click(this)"><</button>  
     <button id = right_button onclick="right_btn_click(this)">></button>
     <button id="detail_button" onclick="window.location.href='https://www.youtube.com/watch?v=FxfEzHiIgQU';">...</button><!-- 額外按鍵(功能待補)-->
-    <script src = "網2.0.js"></script>
+    
     </section>
     <section class ="newsletter">
     <p>請輸入意見</p>
@@ -135,7 +137,7 @@
       <textarea id="message" name="message" placeholder="輸入您的留言" rows="4" required></textarea>
       
       <button type="submit">送出</button>
-  </form>
+    </form>
     <script>
      /* 檢查表單是否已提交 */
         document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -156,5 +158,6 @@
       <p>新北市土城區福安街98-9號</p>
     </footer><!-- 頁尾-->
     <script src="找浣熊/找浣熊.js"></script>
+    <script src="網2.0.js"></script>
 </body>
 </html>
